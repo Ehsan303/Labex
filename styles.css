@@ -1,0 +1,81 @@
+body {
+    font-family: 'Vazir', sans-serif;
+    background-image: url('images/background.jpg'); /* مسیر عکس */
+    background-size: cover; /* عکس کل صفحه رو پر کنه */
+    background-position: center; /* مرکز عکس وسط صفحه باشه */
+    background-repeat: no-repeat; /* عکس تکرار نشه */
+    background-attachment: fixed; /* عکس با اسکرول حرکت نکنه */
+    margin: 0;
+}
+
+.title-container {
+    position: fixed;
+    top: 80px; /* کمی پایین‌تر از بالای صفحه */
+    left: 100px; /* سمت چپ */
+    z-index: 1100; /* بالای همه المان‌ها */
+}
+
+.title-container h1 {
+    font-family: 'Vazir', sans-serif, 'Lobster', cursive;
+    font-size: 2rem; /* کمی کوچکتر */
+    color: #09eca1e3;
+    font-weight: 600;
+    margin: 100;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.search-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 700px; /* عرض کمتر */
+    text-align: center;
+    z-index: 100; /* زیر عنوان، بالای جدول */
+}
+
+.search-bar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* پس‌زمینه سفید نیمه‌شفاف */
+    border-radius: 0.5rem; /* انحنای قرینه در چهار طرف */
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem; /* فضای داخلی */
+    border: none; /* حذف حاشیه پیش‌فرض */
+    box-shadow: none; /* حذف سایه پیش‌فرض */
+}
+
+.search-bar:focus {
+    outline: none; /* حذف کادر پیش‌فرض مرورگر */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* کادر آبی منطبق */
+    background-color: rgba(255, 255, 255, 0.95); /* کمی روشن‌تر موقع فوکوس */
+}
+
+.table-container {
+    position: relative;
+    top: 400px; /* فاصله زیاد از بالا برای قرار گرفتن زیر نوار جستجو */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px; /* فضای اضافی در پایین */
+    opacity: 0; /* در ابتدا نامرئی */
+    transition:0 opacity 0.5s ease-in-out; /* انیمیشن fade */
+    
+    max-height: 400px; /* ارتفاع ثابت برای جدول */
+    overflow-y: auto; /* فعال کردن اسکرول عمودی */
+}
+
+.table-container.show {
+    opacity: 0.9; /* کاملاً مرئی */
+}
+
+.table {
+    background-color: transparent; /* حذف پس‌زمینه پیش‌فرض */
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.9); /* پس‌زمینه فقط برای سلول‌ها */
+}
