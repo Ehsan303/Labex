@@ -1,6 +1,6 @@
 body {
     font-family: 'Vazir', sans-serif;
-    background-image: url('Images/background.jpg'); /* مسیر عکس */
+    background-image: url('https://ehsan303.github.io/Labex/Images/background.jpg'); /* مسیر عکس */
     background-size: cover; /* عکس کل صفحه رو پر کنه */
     background-position: center; /* مرکز عکس وسط صفحه باشه */
     background-repeat: no-repeat; /* عکس تکرار نشه */
