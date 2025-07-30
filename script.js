@@ -1,153 +1,194 @@
-// آرایه برای ذخیره محصولات
 let products = [];
 
-// تابع تبدیل CSV به آرایه اشیاء با حذف تمام کاماهای اضافی در قیمت
-function parseCSV(csvText) {
-    const lines = csvText.trim().split('\n');
-    const headers = lines[0].split(',').map(h => h.trim());
-    const result = [];
-
-    for (let i = 1; i < lines.length; i++) {
-        // این regex کل مقادیر را جدا می‌کند حتی اگر داخل کوتیشن باشند
-        const regex = /(".*?"|[^",\s]+)(?=\s*,|\s*$)/g;
-        const values = [];
-        let match;
-        while ((match = regex.exec(lines[i])) !== null) {
-            let val = match[1];
-            // حذف کوتیشن دور مقدار (اگر بود)
-            if (val.startsWith('"') && val.endsWith('"')) {
-                val = val.slice(1, -1);
-            }
-            values.push(val);
-        }
-
-        if (values.length !== headers.length) {
-            console.warn(`خط ${i + 1} ناقص است، رد شد:`, lines[i]);
-            continue;
-        }
-
-        const obj = {};
-        headers.forEach((header, idx) => {
-            if (header === 'price') {
-                obj[header] = parseInt(values[idx].replace(/,/g, '')) || 0;
-            } else {
-                obj[header] = values[idx];
-            }
-        });
-        result.push(obj);
-    }
-
-    return result;
-}
-
-
-// تابع لود کردن CSV با نمایش دقیق‌تر لاگ‌ها
 async function loadProducts() {
-    try {
-        console.log("شروع fetch فایل data.csv ...");
-        const response = await fetch('data.csv');
-        console.log("وضعیت پاسخ fetch:", response.status);
-        if (!response.ok) {
-            throw new Error(`خطا در لود فایل CSV: ${response.status} ${response.statusText}`);
-        }
-        const csvText = await response.text();
-        const parsedProducts = parseCSV(csvText);
-        if (parsedProducts.length > 0) {
-            products = parsedProducts;
-            console.log('داده‌ها از CSV لود شدند:', products);
-        } else {
-            throw new Error('فایل CSV خالی یا نامعتبر است');
-        }
-    } catch (error) {
-        console.error('خطا در fetch یا پردازش CSV:', error.message);
-        console.warn('استفاده از داده‌های نمونه به جای CSV');
-        products = [
-            { name: "TSH", model: "96", brand: "Pishtaz", price: 10390000 },
-            { name: "TSH", model: "192", brand: "Pishtaz", price: 22500000 },
-            { name: "T4", model: "96", brand: "Ideal", price: 10580000 },
-            { name: "T3", model: "96", brand: "MonoKit", price: 10560000 },
-            { name: "TSH", model: "192", brand: "ideal", price: 22890000 }
-        ];
-    }
-}
+  const CACHE_KEY = "labex_cache";
+  const CACHE_TIME_KEY = "labex_cache_time";
+  const CACHE_VALIDITY_DAYS = 1;
 
+  try {
+    const response = await fetch('labex_data.json', { cache: "no-store" });
+    if (!response.ok) throw new Error('Failed to fetch JSON');
 
-// نمایش داده‌ها در جدول
-function displayProducts(productsToShow) {
-    const tableBody = document.getElementById("productTableBody");
-    const productTable = document.getElementById("productTable");
-    const tableContainer = document.querySelector(".table-container");
-
-    if (!tableBody || !productTable || !tableContainer) {
-        console.error("عنصر جدول پیدا نشد!");
-        return;
-    }
-
-    tableBody.innerHTML = "";
-
-    if (productsToShow.length > 0) {
-        tableContainer.classList.add("show");
-        productTable.classList.remove("d-none");
-
-        productsToShow.forEach(product => {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${product.name}</td>
-                <td>${product.model}</td>
-                <td>${product.brand}</td>
-                <td>${product.price.toLocaleString("fa-IR")}</td>
-            `;
-            tableBody.appendChild(row);
-        });
+    const jsonData = await response.json();
+    if (Array.isArray(jsonData)) {
+      products = jsonData;
+      localStorage.setItem(CACHE_KEY, JSON.stringify(products));
+      localStorage.setItem(CACHE_TIME_KEY, Date.now().toString()); // ذخیره زمان
     } else {
-        tableContainer.classList.remove("show");
-        setTimeout(() => {
-            productTable.classList.add("d-none");
-        }, 500);
+      throw new Error('Invalid JSON structure');
     }
+  } catch (error) {
+    console.warn("⚠️ دریافت آنلاین با خطا مواجه شد، بررسی کش محلی...");
+
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
+
+    if (cachedData && cachedTime) {
+      const ageInDays = (Date.now() - parseInt(cachedTime)) / (1000 * 60 * 60 * 24);
+
+      if (ageInDays <= CACHE_VALIDITY_DAYS) {
+        products = JSON.parse(cachedData);
+        console.log(`✅ داده‌ها از کش معتبر (${ageInDays.toFixed(1)} روز پیش) بارگذاری شد.`);
+        return;
+      } else {
+        console.warn(`⚠️ کش قدیمی (${ageInDays.toFixed(1)} روز)، قابل استفاده نیست.`);
+      }
+    }
+
+    // اگه نه کش معتبری داشتیم و نه fetch موفق بود:
+    const container = document.querySelector(".table-container");
+    if (container) {
+      container.innerHTML = `
+        <p class="text-danger p-3 text-center fw-bold">
+          ❌ خطا در بارگذاری اطلاعات.<br>
+          لطفاً اتصال اینترنت را بررسی کرده و صفحه را مجدد بارگذاری کنید.
+        </p>`;
+    }
+
+    products = [];
+  }
 }
 
-// جستجوی محصولات با فیلتر کردن آرایه
-function searchProducts() {
-    const searchInput = document.getElementById("searchInput");
-    if (!searchInput) {
-        console.error("ورودی جستجو پیدا نشد!");
-        return;
-    }
 
-    const searchTerm = searchInput.value.trim().toLowerCase();
-    const tableContainer = document.querySelector(".table-container");
+// نمایش محصولات در جدول با fade in/out
+function displayProducts(productsToShow) {
+  const tbody = document.getElementById('productTableBody');
+  const table = document.getElementById('productTable');
+  const container = document.querySelector('.table-container');
+console.log('Filtered products:', productsToShow);
+  if (!tbody || !table || !container) return;
 
-    if (searchTerm === "") {
-        tableContainer.classList.remove("show");
-        setTimeout(() => {
-            document.getElementById("productTable").classList.add("d-none");
-        }, 500);
-        return;
-    }
+  if (productsToShow.length === 0) {
+    // اگر نتیجه‌ای نیست، جدول رو مخفی کن
+    container.classList.remove('show');
+    table.classList.add('d-none');
+    tbody.innerHTML = ''; // پاک کردن سطرها
+    return;
+  }
 
-    const filteredProducts = products.filter(product =>
-        product.name.toLowerCase().includes(searchTerm) ||
-        product.model.toString().toLowerCase().includes(searchTerm) ||
-        product.brand.toLowerCase().includes(searchTerm)
-    );
+  // اگر نتیجه‌ای هست، جدول رو نشون بده و سطرها رو بساز
+  tbody.innerHTML = ''; // پاک‌سازی اولیه
+console.log('tbody cleared, children count:', tbody.children.length);
+console.log('rows added:', tbody.children.length);
+console.log('tbody childNodes:', tbody.childNodes);
+console.log('Products to show count:', productsToShow.length);
 
-    displayProducts(filteredProducts);
+  productsToShow.forEach(p => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${p.product}</td>
+      <td>${p.model}</td>
+      <td>${p.brand}</td>
+      <td>${p.price.toLocaleString('en-US')}</td>
+    `;
+    console.log("adding row:", p.product, p.model, p.brand);
+    tbody.appendChild(tr);
+  });
+  console.log('tbody children count after append:', tbody.children.length);
+console.log('Table rows count:', tbody.children.length);  
+
+  table.classList.remove('d-none');
+  container.classList.add('show');
 }
 
-// رویداد صفحه آماده شد
-document.addEventListener("DOMContentLoaded", async () => {
-    await loadProducts();
 
-    const searchInput = document.getElementById("searchInput");
-    if (searchInput) {
-        searchInput.addEventListener("input", searchProducts);
-    }
+// پر کردن منوی برند به صورت خودکار
+function fillBrandFilter() {
+  const brandFilter = document.getElementById('brandFilter');
+  if (!brandFilter) return;
+  brandFilter.innerHTML = '<option value="">Sort by Brand</option>';
 
-    const productTable = document.getElementById("productTable");
-    const tableContainer = document.querySelector(".table-container");
-    if (productTable && tableContainer) {
-        productTable.classList.add("d-none");
-        tableContainer.classList.remove("show");
-    }
+  // گرفتن برندهای یکتا با حروف کوچک برای جلوگیری از تکرار
+  const brandsSet = new Set();
+  products.forEach(p => {
+    if (p.brand) brandsSet.add(p.brand.toLowerCase());
+  });
+  const brands = Array.from(brandsSet).sort();
+
+  brands.forEach(b => {
+    const opt = document.createElement('option');
+    // حروف بزرگ اول کلمه
+    opt.value = b;
+    opt.textContent = b.charAt(0).toUpperCase() + b.slice(1);
+    brandFilter.appendChild(opt);
+  });
+}
+
+function filterAndSearch() {
+  const searchValue = document.getElementById('searchInput').value.trim().toLowerCase();
+  const brandValue = document.getElementById('brandFilter').value;
+  const priceSortValue = document.getElementById('priceSort').value;
+
+  console.log('Search:', searchValue, 'Brand:', brandValue, 'Sort:', priceSortValue);
+
+  if (searchValue.length === 0) {
+    displayProducts([]);
+    return;
+  }
+  // تبدیل جستجو به کلمات جداگانه
+  const searchWords = searchValue.split(/\s+/);
+  console.log('Search words:', searchWords);
+
+  let filtered = products.filter(p => {
+  const combined = `${p.product} ${p.model} ${p.brand}`
+    .toLowerCase()
+    .replace(/\s+/g, ' ')         // فاصله‌های اضافی بین کلمات
+    .replace(/[\u200B-\u200D\uFEFF]/g, '') // حذف کاراکترهای نامرئی
+    .trim(); // حذف فاصله ابتدایی و انتهایی
+const results = searchWords.map(word => ({
+    word,
+    includes: combined.includes(word)
+  }));
+  console.log('Checking product:', p, 'Results:', results);
+
+  return searchWords.every(word => combined.includes(word));
+});
+  console.log('Filtered count after search:', filtered.length);
+  console.log('Filtered items:', filtered);
+
+  if (brandValue !== '') {
+    filtered = filtered.filter(p => p.brand.toLowerCase() === brandValue);
+  }
+  console.log('Filtered count after brand filter:', filtered.length);
+
+  if (priceSortValue === 'asc') {
+    filtered.sort((a, b) => a.price - b.price);
+  } else if (priceSortValue === 'desc') {
+    filtered.sort((a, b) => b.price - a.price);
+  }
+
+  displayProducts(filtered);
+}
+
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadProducts();
+  console.log("Loaded products:", products);
+  fillBrandFilter();
+
+  // نمایش اولیه نده (تا کاربر چیزی تایپ کنه)
+  displayProducts([]);
+
+  // رویدادهای ورودی کاربر
+  document.getElementById('searchInput').addEventListener('input', filterAndSearch);
+  document.getElementById('brandFilter').addEventListener('change', filterAndSearch);
+  document.getElementById('priceSort').addEventListener('change', filterAndSearch);
+  const title = document.querySelector(".title-container");
+  const searchFilter = document.querySelector(".search-filter-container");
+
+  // ابتدا fade-in title در وسط صفحه
+  setTimeout(() => {
+    title.style.opacity = "1";
+  }, 200);
+
+  // بعد 2 ثانیه، title به موقعیتش میره و search نمایش داده میشه
+  setTimeout(() => {
+    title.classList.add("move-to-position");
+  }, 400);
+
+  // بعد از حرکت title (یک ثانیه بعد)، نوار جستجو نمایش داده بشه
+  setTimeout(() => {
+    searchFilter.classList.add("show");
+  }, 800);
 });

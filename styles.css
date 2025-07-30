@@ -1,113 +1,275 @@
 body {
-    font-family: 'Vazir', sans-serif;
-    background-image: url('https://ehsan303.github.io/Labex/Images/background.jpg'); /* مسیر عکس */
-    background-size: cover; /* عکس کل صفحه رو پر کنه */
-    background-position: center; /* مرکز عکس وسط صفحه باشه */
-    background-repeat: no-repeat; /* عکس تکرار نشه */
-    background-attachment: fixed; /* عکس با اسکرول حرکت نکنه */
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-size: 100%;
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: top 50%;
+    animation: bgZoomIn 3s ease-out forwards;
+  }
+/* اعمال فونت فارسی فقط به هدر جدول */
+table thead th {
+font-family: 'Vazirmatn', 'Tahoma', 'Segoe UI', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  direction: rtl;
+    font-size: 0.9rem;
+
+}
+
+/* داده‌های جدول انگلیسی */
+table tbody td {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+    font-weight: 150;
+  direction: ltr;
+}
+
+.english-numbers {
+  font-family: 'Roboto', sans-serif;
+  direction: ltr;
+  unicode-bidi: bidi-override; /* اطمینان از چیدمان لاتین */
+}
+/* انیمیشن زوم روی پس‌زمینه */
+@keyframes bgZoomIn {
+    from {
+        background-size: 100%;
+    }
+    to {
+        background-size: 110%;
+    }
 }
 
 .title-container {
     position: fixed;
-    top: 80px; /* کمی پایین‌تر از بالای صفحه */
-    left: 100px; /* سمت چپ */
-    z-index: 1100; /* بالای همه المان‌ها */
+    top: 250px;           /* شروع از وسط صفحه مثلاً 300px از بالا */
+    left: 500px;          /* موقعیت نهایی چپ ثابت */
+    opacity: 0;
+    transition: all 1.1s;
 }
-
+.title-container.move-to-position {
+    top: 150px;            /* مقصد نهایی بالا */
+    transform: translate Y(200); /* فقط عمودی حرکت کنه */
+    opacity: 1;
+}
+/* تیتر صفحه */
 .title-container h1 {
-    font-family: 'Vazir', sans-serif, 'Lobster', cursive;
-    font-size: 2rem; /* کمی کوچکتر */
-    color: #09eca1e3;
-    font-weight: 600;
-    margin: 100;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
-}
-/* تنظیمات کلی برای موبایل */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
-  .form-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  input[type="text"], select, button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  table {
-    font-size: 14px;
-    overflow-x: auto;
-    display: block;
-  }
-
-  th, td {
-    white-space: nowrap;
-  }
-
-  .title {
-    font-size: 24px; /* برای عنوان */
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
     text-align: center;
-  }
+    margin-bottom: 25px;
+    color: #6028fc;
 }
 
-
-
-.search-container {
+/* نوار جستجو - اول مخفی */
+.search-filter-container {
+      opacity: 0;
+    transform: translateY(100px);
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 700px; /* عرض کمتر */
-    text-align: center;
-    z-index: 100; /* زیر عنوان، بالای جدول */
+    width: 700px;
+    top: 35%;
+    left: 25%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease;
+    z-index: auto;
+}
+.search-filter-container.show {
+     display: flex;
+    flex-direction: row;
+    gap: 0.5rem; /* اختیاری برای فاصله بین اجزا */
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
 
+/* نوار جستجو سه برابر منوی کشویی ها */
 .search-bar {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* پس‌زمینه سفید نیمه‌شفاف */
-    border-radius: 0.5rem; /* انحنای قرینه در چهار طرف */
-    font-size: 1.2rem;
-    padding: 0.75rem 1rem; /* فضای داخلی */
-    border: none; /* حذف حاشیه پیش‌فرض */
-    box-shadow: none; /* حذف سایه پیش‌فرض */
+    flex: 3.5;
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    box-shadow: none;
 }
 
-.search-bar:focus {
-    outline: none; /* حذف کادر پیش‌فرض مرورگر */
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* کادر آبی منطبق */
-    background-color: rgba(255, 255, 255, 0.95); /* کمی روشن‌تر موقع فوکوس */
+.brand-filter,
+.price-sort {
+    background-color: rgba(255, 255, 255, 0.932);
+    flex: 1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding-left :2rem;
+    padding-right: 1rem;
+    background-position: left 0.75rem center;
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    position:relative    
+
+}
+.brand-filter, .price-sort {
+  direction: ltr;   /* فلش بره سمت راست */
+  text-align: left;  /* متن داخلش راست‌چین بمونه */
+}
+select::-ms-expand {
+  display: none;
+}
+
+select::-webkit-inner-spin-button,
+select::-webkit-outer-spin-button {
+  margin: 10;
+}
+/* استایل فوکوس */
+.search-bar:focus,
+.brand-filter:focus,
+.price-sort:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .table-container {
-    position: relative;
-    top: 400px; /* فاصله زیاد از بالا برای قرار گرفتن زیر نوار جستجو */
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 50px; /* فضای اضافی در پایین */
-    opacity: 0; /* در ابتدا نامرئی */
-    transition:0 opacity 0.5s ease-in-out; /* انیمیشن fade */
-    
-    max-height: 400px; /* ارتفاع ثابت برای جدول */
-    overflow-y: auto; /* فعال کردن اسکرول عمودی */
+    position: fixed;
+    top: 340px;
+    left: 25%;
+    width: 700px;
+    max-height: 280px;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    padding-bottom: 0;
+    z-index: 200;
+    direction: ltr;
+    display: block;
+    border-radius: 12px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
 }
 
 .table-container.show {
-    opacity: 0.9; /* کاملاً مرئی */
+    opacity: 0.95;
+    visibility: visible;
 }
 
 .table {
-    background-color: transparent; /* حذف پس‌زمینه پیش‌فرض */
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.table th, .table td {
+#productTable {
+    display: table !important;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table thead tr {
+    position: sticky;
+    top: 0;
+    background-color: #f0f0f0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* رنگ پس‌زمینه‌ی سطرها برای درک بهتر */
+table tr {
+    background-color: #fff;
+}
+
+#productTableBody tr {
+    display: table-row !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+}
+
+.table th,
+.table td {
+    width: 25%;
     text-align: center;
     vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.9); /* پس‌زمینه فقط برای سلول‌ها */
+    background-color: #bce5eb;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    direction: ltr;
+    overflow: hidden;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+    .search-filter-container {
+        flex-direction: column;
+        width: 95vw;
+        gap: 0.75rem;
+    }
+
+    #productTable {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .search-bar,
+    .brand-filter,
+    .price-sort {
+        flex: none;
+        max-width: 130px;
+    }
+    .table-container {
+        max-width: 95vw;
+        width: 95vw;
+    }
+}
+/* رفع فضای خالی اضافی پایین جدول */
+.table-container {
+    padding: 0;
+    margin: 0;
+}
+body, .table, .table * {
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
+}
+#productTable,
+#productTableBody,
+.table-container {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+.main-content {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.418);
+  z-index: -1;
+}
+.footer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* یا left: 20px; */
+  padding: 0;
+  background-color: transparent;
+  opacity: 0;
+  animation: fadeInFooter 1.5s ease forwards;
+  z-index: 9999;
+}
+
+@keyframes fadeInFooter {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

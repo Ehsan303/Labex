@@ -1,0 +1,921 @@
+[
+  {
+    "product": "T3",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 12800000
+  },
+  {
+    "product": "T3",
+    "model": 192,
+    "brand": "Ideal",
+    "price": 23000000
+  },
+  {
+    "product": "T4",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 14300000
+  },
+  {
+    "product": "T4",
+    "model": 192,
+    "brand": "Ideal",
+    "price": 25800000
+  },
+  {
+    "product": "TSH",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 15000000
+  },
+  {
+    "product": "TSH",
+    "model": 192,
+    "brand": "Ideal",
+    "price": 27100000
+  },
+  {
+    "product": "Free T3",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 15900000
+  },
+  {
+    "product": "Free T4",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 16000000
+  },
+  {
+    "product": "T-uptake",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 14700000
+  },
+  {
+    "product": "Anti TPO",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 35400000
+  },
+  {
+    "product": "H.pylori IgA",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 23300000
+  },
+  {
+    "product": "H.pylori IgM",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 24100000
+  },
+  {
+    "product": "H.pylori IgG",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 20500000
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 29770000
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 192,
+    "brand": "Ideal",
+    "price": 53590000
+  },
+  {
+    "product": "PSA",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 21300000
+  },
+  {
+    "product": "Free PSA",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 23100000
+  },
+  {
+    "product": "CEA",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 18900000
+  },
+  {
+    "product": "AFP",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 19300000
+  },
+  {
+    "product": "CA 125",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 22900000
+  },
+  {
+    "product": "CA 19-9",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 24700000
+  },
+  {
+    "product": "CA 15-3",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 24800000
+  },
+  {
+    "product": "HE4",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 38800000
+  },
+  {
+    "product": "Ferritin",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 22900000
+  },
+  {
+    "product": "Ferritin",
+    "model": 192,
+    "brand": "Ideal",
+    "price": 41200000
+  },
+  {
+    "product": "Vitamin B12",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 35600000
+  },
+  {
+    "product": "Folate",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 34200000
+  },
+  {
+    "product": "Growth Hormone (hGH)",
+    "model": 96,
+    "brand": "Ideal",
+    "price": 19400000
+  },
+  {
+    "product": "T3",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 12830331
+  },
+  {
+    "product": "T3",
+    "model": 192,
+    "brand": "Pishtaz",
+    "price": 23094596
+  },
+  {
+    "product": "T4",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 14355268
+  },
+  {
+    "product": "T4",
+    "model": 192,
+    "brand": "Pishtaz",
+    "price": 25839482
+  },
+  {
+    "product": "TSH",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 15069302
+  },
+  {
+    "product": "TSH",
+    "model": 192,
+    "brand": "Pishtaz",
+    "price": 27124744
+  },
+  {
+    "product": "T-Uptake",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 14786546
+  },
+  {
+    "product": "Free T3",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 15983005
+  },
+  {
+    "product": "Free T4",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 16006342
+  },
+  {
+    "product": "Anti TPO",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 35479889
+  },
+  {
+    "product": "Anti TG",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 22000000
+  },
+  {
+    "product": "PSA",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 21304985
+  },
+  {
+    "product": "Free PSA",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 23106113
+  },
+  {
+    "product": "AFP",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 19354507
+  },
+  {
+    "product": "CEA",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 18965794
+  },
+  {
+    "product": "CA 125",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 22930455
+  },
+  {
+    "product": "Calprotectin",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 58712375
+  },
+  {
+    "product": "H.pylori Stool",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 41179387
+  },
+  {
+    "product": "H.pylori IgG",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 20507078
+  },
+  {
+    "product": "H.pylori IgA",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 23354504
+  },
+  {
+    "product": "H.pylori IgM",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 24112528
+  },
+  {
+    "product": "Toxoplasma IgG",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 24126940
+  },
+  {
+    "product": "Toxoplasma IgM",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 25321613
+  },
+  {
+    "product": "Rubella IgG",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 25051081
+  },
+  {
+    "product": "Rubella IgM",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 25906704
+  },
+  {
+    "product": "HSV IgG",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 25288371
+  },
+  {
+    "product": "CMV IgG",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 24639034
+  },
+  {
+    "product": "CMV IgM",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 27571970
+  },
+  {
+    "product": "Ferritin",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 22906322
+  },
+  {
+    "product": "Ferritin",
+    "model": 192,
+    "brand": "Pishtaz",
+    "price": 41231379
+  },
+  {
+    "product": "Growth Hormone (hGH)",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 19448906
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 29775541
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 192,
+    "brand": "Pishtaz",
+    "price": 53595975
+  },
+  {
+    "product": "IgE",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 19764934
+  },
+  {
+    "product": "Insulin",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 36740000
+  },
+  {
+    "product": "Anti dsDNA",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 30800000
+  },
+  {
+    "product": "Anti CCP IgG",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 46200000
+  },
+  {
+    "product": "ANA Screen IgG",
+    "model": 96,
+    "brand": "Pishtaz",
+    "price": 35640000
+  },
+  {
+    "product": "T3",
+    "model": 192,
+    "brand": "Diaplus",
+    "price": 23000000
+  },
+  {
+    "product": "T4",
+    "model": 192,
+    "brand": "Diaplus",
+    "price": 25800000
+  },
+  {
+    "product": "TSH",
+    "model": 192,
+    "brand": "Diaplus",
+    "price": 27100000
+  },
+  {
+    "product": "Free T3",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 15900000
+  },
+  {
+    "product": "Free T4",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 16000000
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 35700000
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 192,
+    "brand": "Diaplus",
+    "price": 64300000
+  },
+  {
+    "product": "FSH",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 14600000
+  },
+  {
+    "product": "LH",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 14400000
+  },
+  {
+    "product": "Prolactin",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 14600000
+  },
+  {
+    "product": "AMH",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 28500000
+  },
+  {
+    "product": "Beta hcG Rapid",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 14900000
+  },
+  {
+    "product": "Beta hcG Rapid",
+    "model": 192,
+    "brand": "Diaplus",
+    "price": 26900000
+  },
+  {
+    "product": "Ferritin",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 22900000
+  },
+  {
+    "product": "Ferritin",
+    "model": 192,
+    "brand": "Diaplus",
+    "price": 41200000
+  },
+  {
+    "product": "Vitamin B12",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 35600000
+  },
+  {
+    "product": "Folate",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 34200000
+  },
+  {
+    "product": "PSA",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 21300000
+  },
+  {
+    "product": "Free PSA",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 23100000
+  },
+  {
+    "product": "H.Pylori IgG",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 20500000
+  },
+  {
+    "product": "H.Pylori IgM",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 24100000
+  },
+  {
+    "product": "H.Pylori IgA",
+    "model": 96,
+    "brand": "Diaplus",
+    "price": 23300000
+  },
+ { "product": "HIV Ag/Ab (4th gen.)",
+ "model": 96, 
+"brand": "Pishtaz",
+ "price": 24975661 },
+  { "product": "HBs Ag",
+ "model": 96, 
+"brand": "Pishtaz", "price": 23778029 },
+  { "product": "HBs Ab", "model": 96, "brand": "Pishtaz", "price": 27028764 },
+  { "product": "HCV Ab", "model": 96, "brand": "Pishtaz", "price": 26197607 },
+  { "product": "FSH", "model": 96, "brand": "Pishtaz", "price": 14608646 },
+  { "product": "LH", "model": 96, "brand": "Pishtaz", "price": 14445251 },
+  { "product": "Prolactin", "model": 96, "brand": "Pishtaz", "price": 14631881 },
+  { "product": "Beta hCG Rapid", "model": 96, "brand": "Pishtaz", "price": 14967524 },
+  { "product": "Beta hCG Rapid", "model": 192, "brand": "Pishtaz", "price": 26941542 },
+  { "product": "Beta hCG Titration", "model": 96, "brand": "Pishtaz", "price": 14967524 },
+  { "product": "AMH", "model": 96, "brand": "Pishtaz", "price": 35200000 }
+,
+  {
+    "product": "T3",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 12800000
+  },
+  {
+    "product": "T3",
+    "model": 192,
+    "brand": "Pishgaman",
+    "price": 23080000
+  },
+  {
+    "product": "T4",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 14350000
+  },
+  {
+    "product": "T4",
+    "model": 192,
+    "brand": "Pishgaman",
+    "price": 25800000
+  },
+  {
+    "product": "TSH",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 15000000
+  },
+  {
+    "product": "TSH",
+    "model": 192,
+    "brand": "Pishgaman",
+    "price": 27100000
+  },
+  {
+    "product": "Free T3",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 7870000
+  },
+  {
+    "product": "Free T3",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 16000000
+  },
+  {
+    "product": "Free T4",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 7870000
+  },
+  {
+    "product": "Free T4",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 16000000
+  },
+  {
+    "product": "T-Uptake",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 14750000
+  },
+  {
+    "product": "Anti TPO",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 35400000
+  },
+  {
+    "product": "H.Pylori IgG",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 11250000
+  },
+  {
+    "product": "H.Pylori IgG",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 20500000
+  },
+  {
+    "product": "H.Pylori IgA",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 6950000
+  },
+  {
+    "product": "H.Pylori IgA",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 12658000
+  },
+  {
+    "product": "Ferritin",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 12540000
+  },
+  {
+    "product": "Ferritin",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 22900000
+  },
+  {
+    "product": "Ferritin",
+    "model": 192,
+    "brand": "Pishgaman",
+    "price": 41200000
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 8710000
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 15840000
+  },
+  {
+    "product": "Vitamin D3",
+    "model": 192,
+    "brand": "Pishgaman",
+    "price": 28510000
+  },
+  {
+    "product": "Vitamin B12",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 19500000
+  },
+  {
+    "product": "Vitamin B12",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 35600000
+  },
+  {
+    "product": "Beta hCG Rapid",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 14960000
+  },
+  {
+    "product": "Beta hCG Rapid",
+    "model": 192,
+    "brand": "Pishgaman",
+    "price": 26940000
+  },
+  {
+    "product": "Beta hCG Titration",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 14960000
+  },
+  {
+    "product": "FSH",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 14600000
+  },
+  {
+    "product": "LH",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 14440000
+  },
+  {
+    "product": "Prolactin",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 14630000
+  },
+  {
+    "product": "AMH",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 15000000
+  },
+  {
+    "product": "AMH",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 27500000
+  },
+  {
+    "product": "PSA",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 11700000
+  },
+  {
+    "product": "PSA",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 21300000
+  },
+  {
+    "product": "Free PSA",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 12650000
+  },
+  {
+    "product": "Free PSA",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 23100000
+  },
+  {
+    "product": "Anti CCP",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 24200000
+  },
+  {
+    "product": "Anti CCP",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 44000000
+  },
+  {
+    "product": "Anti-tTG IgA",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 21050000
+  },
+  {
+    "product": "Anti-tTG IgA",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 38280000
+  },
+  {
+    "product": "Anti-tTG IgG",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 21050000
+  },
+  {
+    "product": "Anti-tTG IgG",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 38280000
+  },
+  {
+    "product": "Anti dsDNA",
+    "model": 48,
+    "brand": "Pishgaman",
+    "price": 16500000
+  },
+  {
+    "product": "Anti dsDNA",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 30000000
+  },
+  {
+    "product": "Elisa Check",
+    "model": 96,
+    "brand": "Pishgaman",
+    "price": 6900000
+  },
+  {"product": "HIV Ag/Ab (3rd gen.)", "model": 96, "brand": "Wantai", "price": 21610000},
+  {"product": "T3", "model": 96, "brand": "MonoKit", "price": 12800000},
+  {"product": "HCV", "model": 96, "brand": "Wantai", "price": 22620000},
+  {"product": "T3", "model": 192, "brand": "MonoKit", "price": 23000000},
+  {"product": "HBs Ag", "model": 96, "brand": "Wantai", "price": 17590000},
+  {"product": "T4", "model": 96, "brand": "MonoKit", "price": 14300000},
+  {"product": "T4", "model": 192, "brand": "MonoKit", "price": 25800000},
+  {"product": "PT", "model": "4ml", "brand": "Fisher", "price": 17010000},
+  {"product": "TSH", "model": 96, "brand": "MonoKit", "price": 15000000},
+  {"product": "PT ", "model": "10ml", "brand": "Fisher", "price": 28030000},
+  {"product": "TSH", "model": 192, "brand": "MonoKit", "price": 27100000},
+  {"product": "PTT", "model": "4 ml", "brand": "Fisher", "price": 25660000},
+  {"product": "PTT", "model": "10 ml", "brand": "Fisher", "price": 35010000},
+  {"product": "T-Uptake", "model": 96, "brand": "MonoKit", "price": 14700000},
+  {"product": "Free T3", "model": 96, "brand": "MonoKit", "price": 15900000},
+  {"product": "Free T4", "model": 96, "brand": "MonoKit", "price": 16000000},
+  {"product": "PTH", "model": 96, "brand": "MonoKit", "price": 39600000},
+  {"product": "LH", "model": 96, "brand": "MonoKit", "price": 14400000},
+  {"product": "FSH", "model": 96, "brand": "MonoKit", "price": 14600000},
+  {"product": "PRL", "model": 96, "brand": "MonoKit", "price": 14600000},
+  {"product": "Vitamin B12", "model": 96, "brand": "MonoKit", "price": 35600000},
+  {"product": "Beta HCG", "model": 96, "brand": "MonoKit", "price": 14900000},
+  {"product": "Beta HCG Rapid", "model": 96, "brand": "MonoKit", "price": 14900000},
+  {"product": "Beta HCG Rapid", "model": 192, "brand": "MonoKit", "price": 26900000},
+  {"product": "AMH", "model": 96, "brand": "MonoKit", "price": 34200000},
+  {"product": "Ferritin", "model": 96, "brand": "MonoKit", "price": 22900000},
+  {"product": "Ferritin", "model": 192, "brand": "MonoKit", "price": 41200000},
+  {"product": "Anti-TPO", "model": 96, "brand": "MonoKit", "price": 35400000},
+  {"product": "PSA", "model": 96, "brand": "MonoKit", "price": 21300000},
+  {"product": "Free PSA", "model": 96, "brand": "MonoKit", "price": 23100000},
+  {"product": "AEF", "model": 96, "brand": "MonoKit", "price": 19300000},
+  {"product": "CEA", "model": 96, "brand": "MonoKit", "price": 18900000},
+  {"product": "CA 19-9", "model": 96, "brand": "MonoKit", "price": 24700000},
+  {"product": "CA 125", "model": 96, "brand": "MonoKit", "price": 22900000},
+  {"product": "CA 15-3", "model": 96, "brand": "MonoKit", "price": 24800000},
+  {"product": "Anti-H-pylori-lgM", "model": 96, "brand": "MonoKit", "price": 24100000},
+  {"product": "Anti-H-pylori-lgA", "model": 96, "brand": "MonoKit", "price": 23300000},
+  {"product": "Anti-H-pylori-lgG", "model": 96, "brand": "MonoKit", "price": 20500000},
+  {"product": "Vitamin D3", "model": 96, "brand": "MonoKit", "price": 29770000},
+  {"product": "Vitamin D3", "model": 192, "brand": "MonoKit", "price": 53590000},
+  {"product": "Free Testosterone", "model": 96, "brand": "MonoKit", "price": 28100000},
+  {"product": "Testosterone", "model": 96, "brand": "MonoKit", "price": 26200000},
+  {"product": "Floate", "model": 96, "brand": "MonoKit", "price": 34200000},
+  {"product": "Estradol (E2)", "model": 96, "brand": "MonoKit", "price": 27000000},
+  {"product": "Progesterone", "model": 96, "brand": "MonoKit", "price": 25200000},
+  {"product": "DHEA-S", "model": 96, "brand": "MonoKit", "price": 25500000},
+  {"product": "Coristol", "model": 96, "brand": "MonoKit", "price": 25000000},
+  {"product": "17Oh-Progesterone", "model": 96, "brand": "MonoKit", "price": 25000000},
+  {"product": "Control PT/PTT", "model": "Level 1", "brand": "Fisher", "price": 18080000},
+  {"product": "Albumin", "model": "250 (2*125)", "brand": "Man", "price": 2220000},
+  {"product": "ALP", "model": "125 (1*100+1*25)", "brand": "Man", "price": 2490000},
+  {"product": "ALT (SGPT)", "model": "125 (1*100+1*25)", "brand": "Man", "price": 3170000},
+  {"product": "AST (SGOT)", "model": "125 (1*100+1*25)", "brand": "Man", "price": 3170000},
+  {"product": "AMYLASE", "model": "100 (2*50)", "brand": "Man", "price": 21400000},
+  {"product": "Bilirubin Direct", "model": "250 (2*100+2*25)", "brand": "Man", "price": 3800000},
+  {"product": "Bilirubin Total", "model": "250 (2*100+2*25)", "brand": "Man", "price": 3800000},
+  {"product": "Calcium (Arz)", "model": "250 (2*125)", "brand": "Man", "price": 4750000},
+  {"product": "Calcium (MTB)", "model": "250 (1*125+1*125)", "brand": "Man", "price": 2770000},
+  {"product": "Cholesterol", "model": "250 (2*125)", "brand": "Man", "price": 3580000},
+  {"product": "CKMB", "model": "125 (1*100+1*25)", "brand": "Man", "price": 35800000},
+  {"product": "CK-NAC/CPK", "model": "125 (1*100+1*25)", "brand": "Man", "price": 22200000},
+  {"product": "Creatinine", "model": "250 (1*125+1*125)", "brand": "Man", "price": 2160000},
+  {"product": "CSF/Urine Protein", "model": "150 (2*75) ", "brand": "Man", "price": 16200000},
+  {"product": "G6PD", "model": "150 (1*25+1*25+2*50)", "brand": "Man", "price": 4900000},
+  {"product": "Glucose", "model": "250 (125*2)", "brand": "Man", "price": 1800000},
+  {"product": "Hb A1C", "model": "32 (1*24+1*8)", "brand": "Man", "price": 24750000},
+  {"product": "HDL Direct", "model": "80 (1*60+1*20)", "brand": "Man", "price": 8620000},
+  {"product": "HDL Direct", "model": "120 (2*45+2*15)", "brand": "Man", "price": 13400000},
+  {"product": "Iron", "model": "270 (2*125+1*15+1*5)", "brand": "Man", "price": 7540000},
+  {"product": "LDH", "model": "125 (1*100+1*25)", "brand": "Man", "price": 3560000},
+  {"product": "LDL Direct", "model": "80 (1*60+1*20)", "brand": "Man", "price": 12770000},
+  {"product": "LDL Direct", "model": "120 (2*45+2*15)", "brand": "Man", "price": 19700000},
+  {"product": "Magnesium", "model": "80 (25*4)", "brand": "Man", "price": 3350000},
+  {"product": "Micro Albumin", "model": "55 (2*25+1*5)", "brand": "Man", "price": 23400000},
+  {"product": "Phosphorus", "model": "500 (4*125)", "brand": "Man", "price": 4390000},
+  {"product": "Total Protein", "model": "250 (2*125)", "brand": "Man", "price": 2040000},
+  {"product": "Triglycerides", "model": "250 (2*125)", "brand": "Man", "price": 7830000},
+  {"product": "Urea", "model": "250 (25*100+2*2)", "brand": "Man", "price": 7100000},
+  {"product": "Urease", "model": "45 Tests (3*15)", "brand": "Man", "price": 14280000},
+  {"product": "Uric Acid", "model": "250 (2*125)", "brand": "Man", "price": 8300000},
+  {"product": "Zinc", "model": "75 (3*20+3*5) Cal&Ctrl", "brand": "Man", "price": 13400000},
+  {"product": "Elitrol I", "model": "1*5", "brand": "Man", "price": 2820000},
+  {"product": "Elitrol II", "model": "1*5", "brand": "Man", "price": 2580000},
+  {"product": "G6PD Control H", "model": "1*1", "brand": "Man", "price": 600000},
+  {"product": "G6PD Control L", "model": "1*1", "brand": "Man", "price": 600000},
+  {"product": "Hb A1C Control H", "model": "1*0.5", "brand": "Man", "price": 4740000},
+  {"product": "Hb A1C Control L", "model": "1*0.5", "brand": "Man", "price": 4740000},
+  {"product": "Hb A1C Control Set", "model": "3*0.56", "brand": "Man", "price": 8280000},
+  {"product": "lipid Control H", "model": "1*1", "brand": "Man", "price": 2110000},
+  {"product": "lipid Control L", "model": "1*1", "brand": "Man", "price": 2110000},
+  {"product": "M.Albumin Con 1", "model": "1*1", "brand": "Man", "price": 4650000},
+  {"product": "M.Albumin Con 2", "model": "1*1", "brand": "Man", "price": 4650000},
+  {"product": "Control Normal", "model": "1*5", "brand": "Man", "price": 5400000},
+  {"product": "Control Pathology", "model": "1*5", "brand": "Man", "price": 5400000},
+  {"product": "ImmunoAssay Control", "model": "1*5", "brand": "Man", "price": 7800000},
+  {"product": "Bilirubin Standard", "model": "1*3", "brand": "Man", "price": 3000000},
+  {"product": "Elical II", "model": "1*3", "brand": "Man", "price": 2940000},
+  {"product": "HbA1C Calibrator", "model": "4*0.5", "brand": "Man", "price": 14340000},
+  {"product": "Lipid Calibrator", "model": "1*1", "brand": "Man", "price": 2110000},
+  {"product": "Man CAL", "model": "1*3", "brand": "Man", "price": 5720000},
+  {"product": "MicroAlbumin CAL", "model": "5*1", "brand": "Man", "price": 17100000}
+]
+
+
+

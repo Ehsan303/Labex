@@ -1,0 +1,122 @@
+.main-content {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.616);
+  z-index: -1;
+}
+.about-page {
+  min-height: 100vh;
+  background-image: url('your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  font-family: 'Merriweather','Vazirmatn', sans-serif;
+}
+
+.about-section {
+  text-align: center;
+  margin: 3.5rem auto;
+  padding: 2rem;
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(27, 27, 27, 0.1);
+  animation: fadeInUp 0.9s ease forwards;
+  opacity: 0;
+  backdrop-filter: blur(4px);
+  font-family: 'Merriweather';
+
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 1rem;
+  font-family: 'Lobster', cursive;
+  color: #1d1d1dee;
+  display: inline-block;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #6028fc, transparent);
+}
+
+.section-text {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  text-align: justify;
+   font-size: 3.3rem;
+  color: #1d1d1de3;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.contact-buttons .btn {
+  margin: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-buttons .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.mission-text, .vision-text {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-width: 900px;
+  width: 100%;
+    font-weight: 500; /* عددی بین 100 تا 900 */
+     font-size: 1.3rem;
+  color: #1d1d1df8;
+  text-shadow: 1px 1px 2px rgba(49, 49, 49, 0.788);
+    text-align: justify;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 2 rem;
+}
+
+.mission-text, .vision-text, .about-section p {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
